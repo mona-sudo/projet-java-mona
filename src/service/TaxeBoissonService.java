@@ -78,10 +78,11 @@ public class TaxeBoissonService {
     public int save(TaxeBoisson taxeBoisson, ArrayList<TaxeBoisson> taxeboissons) {
         TaxeBoisson tb = findById(taxeBoisson.getId(), taxeboissons);
         if (tb == null) {
-            return -1;
-        } else {
             taxeboissons.add(tb);
             return 1;
+        } else {
+
+            return -1;
         }
 
     }
@@ -108,11 +109,4 @@ public class TaxeBoissonService {
 
     }
 
-    public int delai(String idLocale, ArrayList<TaxeBoisson> taxeboissons) {
-
-    }
-
-    public void findById(double id, ArrayList<TaxeBoisson> taxeboissons) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

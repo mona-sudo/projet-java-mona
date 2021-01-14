@@ -10,11 +10,13 @@ package bean;
  * @author mouna
  */
 public class TaxeBoisson {
-   private String id;
-   private double annee;
-   private double montant;
-   private double trim;
-   private String idLocale;
+
+    private String id;
+    private double annee;
+    private double montant;
+    private double trim;
+    private String idLocale;
+    private double paiement;
 
     public TaxeBoisson() {
     }
@@ -24,6 +26,19 @@ public class TaxeBoisson {
         this.annee = annee;
         this.montant = montant;
         this.idLocale = idLocale;
+    }
+
+    public double getPaiement() {
+        return paiement;
+    }
+
+    public void setPaiement(double paiement) {
+        this.paiement = paiement;
+    }
+
+    public TaxeBoisson(String id, double paiement) {
+        this.id = id;
+        this.paiement = paiement;
     }
 
     public TaxeBoisson(String id, double annee, double montant) {
@@ -84,5 +99,5 @@ public class TaxeBoisson {
     public String toString() {
         return "TaxeBoisson{" + "id=" + id + ", annee=" + annee + ", montant=" + montant + ", trim=" + trim + ", idLocale=" + idLocale + '}';
     }
-    
+
 }
